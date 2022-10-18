@@ -20,15 +20,14 @@ public class TransferenciaService {
 	@Autowired
 	TransferenciaRepository transferenciaRepository;
 	
-	public List<TransferenciaEntity> getAll(TransferenciaEntity transferencia) {
+	
+	public List<TransferenciaEntity> getAll(){
 		return transferenciaRepository.findAll();
 	}
 	
-	public void excluir(int id) {
-		transferenciaRepository.deleteById(id); 
-	}
-	
-	public TransferenciaEntity inserir(TransferenciaEntity transferencia) {
+	public TransferenciaEntity save(TransferenciaEntity transferencia) {
 		return transferenciaRepository.save(transferencia);
 	}
+
+
 }
